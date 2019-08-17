@@ -5,5 +5,5 @@
 - [Majorsystem](https://major-system.herokuapp.com/)
 
 ## Dokumentation
-- [Drupal](https://documentations.herokuapp.com/)
+- [Übersicht](https://documentations.herokuapp.com/)
 
