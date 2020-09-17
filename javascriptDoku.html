@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Asciidoc</title>
+<title>Algorithmus</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -442,63 +442,62 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Funktionen</div>
 <ul class="sectlevel1">
-<li><a href="#_asciidoc">1. Asciidoc</a></li>
-<li><a href="#_algorithmus">2. Algorithmus</a>
+<li><a href="#_algorithmus">1. Algorithmus</a>
 <ul class="sectlevel2">
-<li><a href="#_sort">2.1. Sort</a></li>
+<li><a href="#_sort">1.1. Sort</a></li>
 </ul>
 </li>
-<li><a href="#_grundlagen">3. Grundlagen</a>
+<li><a href="#_grundlagen">2. Grundlagen</a>
 <ul class="sectlevel2">
-<li><a href="#_objects">3.1. Objects</a></li>
-<li><a href="#_this">3.2. this</a>
+<li><a href="#_objects">2.1. Objects</a></li>
+<li><a href="#_this">2.2. this</a>
 <ul class="sectlevel3">
-<li><a href="#_bind">3.2.1. bind</a></li>
+<li><a href="#_bind">2.2.1. bind</a></li>
 </ul>
 </li>
-<li><a href="#_strings_in_unicode_und_umgekehrt">3.3. Strings in Unicode und umgekehrt</a></li>
+<li><a href="#_strings_in_unicode_und_umgekehrt">2.3. Strings in Unicode und umgekehrt</a></li>
 </ul>
 </li>
-<li><a href="#_logik">4. Logik</a>
+<li><a href="#_logik">3. Logik</a>
 <ul class="sectlevel2">
-<li><a href="#_exclusives_oder">4.1. Exclusives Oder</a></li>
+<li><a href="#_exclusives_oder">3.1. Exclusives Oder</a></li>
 </ul>
 </li>
-<li><a href="#_mathematik">5. Mathematik</a>
+<li><a href="#_mathematik">4. Mathematik</a>
 <ul class="sectlevel2">
-<li><a href="#_arithmetische_funktionen">5.1. Arithmetische Funktionen</a>
+<li><a href="#_arithmetische_funktionen">4.1. Arithmetische Funktionen</a>
 <ul class="sectlevel3">
-<li><a href="#_fakultät">5.1.1. Fakultät</a></li>
+<li><a href="#_fakultät">4.1.1. Fakultät</a></li>
 </ul>
 </li>
-<li><a href="#_relation_finformatik_vs_fmathematik">5.2. Relation f()Informatik vs. f()Mathematik</a>
+<li><a href="#_relation_finformatik_vs_fmathematik">4.2. Relation f()Informatik vs. f()Mathematik</a>
 <ul class="sectlevel3">
-<li><a href="#_darstellung">5.2.1. Darstellung</a></li>
-<li><a href="#_grundmenge">5.2.2. Grundmenge</a></li>
-<li><a href="#_definitionsmenge">5.2.3. Definitionsmenge</a></li>
-<li><a href="#_wertemenge">5.2.4. Wertemenge</a></li>
+<li><a href="#_darstellung">4.2.1. Darstellung</a></li>
+<li><a href="#_grundmenge">4.2.2. Grundmenge</a></li>
+<li><a href="#_definitionsmenge">4.2.3. Definitionsmenge</a></li>
+<li><a href="#_wertemenge">4.2.4. Wertemenge</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_funktionale_programmierung">6. Funktionale Programmierung</a></li>
-<li><a href="#_react">7. React</a>
+<li><a href="#_funktionale_programmierung">5. Funktionale Programmierung</a></li>
+<li><a href="#_react">6. React</a>
 <ul class="sectlevel2">
-<li><a href="#_hooks">7.1. Hooks</a>
+<li><a href="#_hooks">6.1. Hooks</a>
 <ul class="sectlevel3">
-<li><a href="#_class_vs_hooks">7.1.1. class vs. hooks</a></li>
-<li><a href="#_usereducer">7.1.2. useReducer</a></li>
-<li><a href="#_usereducer_usecontext">7.1.3. useReducer + useContext</a></li>
-<li><a href="#_use_vs_react_memo">7.1.4. use vs. react-memo</a></li>
-<li><a href="#_advance">7.1.5. advance</a></li>
+<li><a href="#_class_vs_hooks">6.1.1. class vs. hooks</a></li>
+<li><a href="#_usereducer">6.1.2. useReducer</a></li>
+<li><a href="#_usereducer_usecontext">6.1.3. useReducer + useContext</a></li>
+<li><a href="#_use_vs_react_memo">6.1.4. use vs. react-memo</a></li>
+<li><a href="#_advance">6.1.5. advance</a></li>
 </ul>
 </li>
-<li><a href="#_react_lazy">7.2. React.lazy</a></li>
+<li><a href="#_react_lazy">6.2. React.lazy</a></li>
 </ul>
 </li>
-<li><a href="#_material_ui">8. Material-Ui</a>
+<li><a href="#_material_ui">7. Material-Ui</a>
 <ul class="sectlevel2">
-<li><a href="#_grid">8.1. Grid</a></li>
+<li><a href="#_grid">7.1. Grid</a></li>
 </ul>
 </li>
 </ul>
@@ -507,18 +506,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="content">
 <!-- toc disabled -->
 <div class="sect1">
-<h2 id="_asciidoc"><a class="anchor" href="#_asciidoc"></a>1. Asciidoc</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="http://127.0.0.1:5500/Dokumentationen/Technische%20Dokumentationen/AsciiDocTutorial/AsciiTutorial.html">Link</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_algorithmus"><a class="anchor" href="#_algorithmus"></a>2. Algorithmus</h2>
+<h2 id="_algorithmus"><a class="anchor" href="#_algorithmus"></a>1. Algorithmus</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_sort"><a class="anchor" href="#_sort"></a>2.1. Sort</h3>
+<h3 id="_sort"><a class="anchor" href="#_sort"></a>1.1. Sort</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript"><span class="keyword">function</span> <span class="function">sort</span>(unsorted) {
@@ -542,10 +533,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_grundlagen"><a class="anchor" href="#_grundlagen"></a>3. Grundlagen</h2>
+<h2 id="_grundlagen"><a class="anchor" href="#_grundlagen"></a>2. Grundlagen</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_objects"><a class="anchor" href="#_objects"></a>3.1. Objects</h3>
+<h3 id="_objects"><a class="anchor" href="#_objects"></a>2.1. Objects</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript">fnCon = () =&gt; {
@@ -562,7 +553,7 @@ fnCon();</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_this"><a class="anchor" href="#_this"></a>3.2. this</h3>
+<h3 id="_this"><a class="anchor" href="#_this"></a>2.2. this</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript"><span class="comment">// Einfaches Beispiel</span>
@@ -589,7 +580,7 @@ console.log(album);</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_bind"><a class="anchor" href="#_bind"></a>3.2.1. bind</h4>
+<h4 id="_bind"><a class="anchor" href="#_bind"></a>2.2.1. bind</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript">const button = {
@@ -637,7 +628,7 @@ button.click();</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_strings_in_unicode_und_umgekehrt"><a class="anchor" href="#_strings_in_unicode_und_umgekehrt"></a>3.3. Strings in Unicode und umgekehrt</h3>
+<h3 id="_strings_in_unicode_und_umgekehrt"><a class="anchor" href="#_strings_in_unicode_und_umgekehrt"></a>2.3. Strings in Unicode und umgekehrt</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript">console.log(<span class="string"><span class="delimiter">&quot;</span><span class="content">Ich bin das </span><span class="char">\&quot;</span><span class="content">A</span><span class="char">\&quot;</span><span class="content"> in UTF16:</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">A</span><span class="delimiter">&quot;</span></span>.codePointAt(<span class="integer">0</span>));
@@ -662,10 +653,10 @@ console.log(<span class="string"><span class="delimiter">&quot;</span><span clas
 </div>
 </div>
 <div class="sect1">
-<h2 id="_logik"><a class="anchor" href="#_logik"></a>4. Logik</h2>
+<h2 id="_logik"><a class="anchor" href="#_logik"></a>3. Logik</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_exclusives_oder"><a class="anchor" href="#_exclusives_oder"></a>4.1. Exclusives Oder</h3>
+<h3 id="_exclusives_oder"><a class="anchor" href="#_exclusives_oder"></a>3.1. Exclusives Oder</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript"><span class="keyword">function</span> <span class="function">XOR</span>(a, b) {
@@ -679,12 +670,12 @@ console.log(<span class="string"><span class="delimiter">&quot;</span><span clas
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mathematik"><a class="anchor" href="#_mathematik"></a>5. Mathematik</h2>
+<h2 id="_mathematik"><a class="anchor" href="#_mathematik"></a>4. Mathematik</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_arithmetische_funktionen"><a class="anchor" href="#_arithmetische_funktionen"></a>5.1. Arithmetische Funktionen</h3>
+<h3 id="_arithmetische_funktionen"><a class="anchor" href="#_arithmetische_funktionen"></a>4.1. Arithmetische Funktionen</h3>
 <div class="sect3">
-<h4 id="_fakultät"><a class="anchor" href="#_fakultät"></a>5.1.1. Fakultät</h4>
+<h4 id="_fakultät"><a class="anchor" href="#_fakultät"></a>4.1.1. Fakultät</h4>
 <div class="listingblock">
 <div class="title">1.Version</div>
 <div class="content">
@@ -710,9 +701,9 @@ console.log(<span class="string"><span class="delimiter">&quot;</span><span clas
 </div>
 </div>
 <div class="sect2">
-<h3 id="_relation_finformatik_vs_fmathematik"><a class="anchor" href="#_relation_finformatik_vs_fmathematik"></a>5.2. Relation f()Informatik vs. f()Mathematik</h3>
+<h3 id="_relation_finformatik_vs_fmathematik"><a class="anchor" href="#_relation_finformatik_vs_fmathematik"></a>4.2. Relation f()Informatik vs. f()Mathematik</h3>
 <div class="sect3">
-<h4 id="_darstellung"><a class="anchor" href="#_darstellung"></a>5.2.1. Darstellung</h4>
+<h4 id="_darstellung"><a class="anchor" href="#_darstellung"></a>4.2.1. Darstellung</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript"><span class="comment">/*
@@ -730,7 +721,7 @@ let g = (x) =&gt; <span class="integer">2</span>*x-<span class="integer">1</span
 </div>
 </div>
 <div class="sect3">
-<h4 id="_grundmenge"><a class="anchor" href="#_grundmenge"></a>5.2.2. Grundmenge</h4>
+<h4 id="_grundmenge"><a class="anchor" href="#_grundmenge"></a>4.2.2. Grundmenge</h4>
 <div class="paragraph">
 <p>Welche Menge soll einer Funktion von vornherein als Eingangswerte (Übergabeparameter) zur Verfügung stehen. Mathematisch spricht man hier von den <strong>Grundmenge</strong></p>
 </div>
@@ -750,7 +741,7 @@ let g = (x) =&gt; <span class="integer">2</span>*x-<span class="integer">1</span
 </div>
 </div>
 <div class="sect3">
-<h4 id="_definitionsmenge"><a class="anchor" href="#_definitionsmenge"></a>5.2.3. Definitionsmenge</h4>
+<h4 id="_definitionsmenge"><a class="anchor" href="#_definitionsmenge"></a>4.2.3. Definitionsmenge</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -767,7 +758,7 @@ let g = (x) =&gt; <span class="integer">2</span>*x-<span class="integer">1</span
 </div>
 </div>
 <div class="sect3">
-<h4 id="_wertemenge"><a class="anchor" href="#_wertemenge"></a>5.2.4. Wertemenge</h4>
+<h4 id="_wertemenge"><a class="anchor" href="#_wertemenge"></a>4.2.4. Wertemenge</h4>
 <div class="paragraph">
 <p>Man kann alle Werte aus der Definitionsmenge für die Variable x in die Funktionsgleichung einsetzen und daraus jeweils den Funktionswert berechnen</p>
 </div>
@@ -787,7 +778,7 @@ let g = (x) =&gt; <span class="integer">2</span>*x-<span class="integer">1</span
 </div>
 </div>
 <div class="sect1">
-<h2 id="_funktionale_programmierung"><a class="anchor" href="#_funktionale_programmierung"></a>6. Funktionale Programmierung</h2>
+<h2 id="_funktionale_programmierung"><a class="anchor" href="#_funktionale_programmierung"></a>5. Funktionale Programmierung</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -846,12 +837,12 @@ artists
 </div>
 </div>
 <div class="sect1">
-<h2 id="_react"><a class="anchor" href="#_react"></a>7. React</h2>
+<h2 id="_react"><a class="anchor" href="#_react"></a>6. React</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_hooks"><a class="anchor" href="#_hooks"></a>7.1. Hooks</h3>
+<h3 id="_hooks"><a class="anchor" href="#_hooks"></a>6.1. Hooks</h3>
 <div class="sect3">
-<h4 id="_class_vs_hooks"><a class="anchor" href="#_class_vs_hooks"></a>7.1.1. class vs. hooks</h4>
+<h4 id="_class_vs_hooks"><a class="anchor" href="#_class_vs_hooks"></a>6.1.1. class vs. hooks</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript"><span class="comment">//FunctionalProgramming</span>
@@ -890,7 +881,7 @@ artists
 </div>
 </div>
 <div class="sect3">
-<h4 id="_usereducer"><a class="anchor" href="#_usereducer"></a>7.1.2. useReducer</h4>
+<h4 id="_usereducer"><a class="anchor" href="#_usereducer"></a>6.1.2. useReducer</h4>
 <div class="paragraph">
 <p><a href="https://www.youtube.com/watch?v=kK_Wqx3RnHk">YOUTUBE</a> <a href="https://www.udemy.com/course/modern-react-bootcamp/learn/lecture/14541146#overview">UDEMY</a></p>
 </div>
@@ -945,26 +936,26 @@ const ACTION = {
 </div>
 </div>
 <div class="sect3">
-<h4 id="_usereducer_usecontext"><a class="anchor" href="#_usereducer_usecontext"></a>7.1.3. useReducer + useContext</h4>
+<h4 id="_usereducer_usecontext"><a class="anchor" href="#_usereducer_usecontext"></a>6.1.3. useReducer + useContext</h4>
 <div class="paragraph">
 <p><a href="https://www.youtube.com/watch?v=cPE_tpCRyRg">YOUTUBE</a></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_use_vs_react_memo"><a class="anchor" href="#_use_vs_react_memo"></a>7.1.4. use vs. react-memo</h4>
+<h4 id="_use_vs_react_memo"><a class="anchor" href="#_use_vs_react_memo"></a>6.1.4. use vs. react-memo</h4>
 <div class="paragraph">
 <p><a href="https://www.youtube.com/watch?v=uojLJFt9SzY">YOUTUBE</a></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_advance"><a class="anchor" href="#_advance"></a>7.1.5. advance</h4>
+<h4 id="_advance"><a class="anchor" href="#_advance"></a>6.1.5. advance</h4>
 <div class="paragraph">
 <p><a href="https://www.youtube.com/watch?v=J-g9ZJha8FE">YOUTUBE</a></p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_react_lazy"><a class="anchor" href="#_react_lazy"></a>7.2. React.lazy</h3>
+<h3 id="_react_lazy"><a class="anchor" href="#_react_lazy"></a>6.2. React.lazy</h3>
 <div class="paragraph">
 <p><a href="https://www.youtube.com/watch?v=00gQyXRL7KI" class="bare">https://www.youtube.com/watch?v=00gQyXRL7KI</a></p>
 </div>
@@ -1041,10 +1032,10 @@ const Tag = React.lazy(() =&gt; <span class="reserved">import</span>(<span class
 </div>
 </div>
 <div class="sect1">
-<h2 id="_material_ui"><a class="anchor" href="#_material_ui"></a>8. Material-Ui</h2>
+<h2 id="_material_ui"><a class="anchor" href="#_material_ui"></a>7. Material-Ui</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_grid"><a class="anchor" href="#_grid"></a>8.1. Grid</h3>
+<h3 id="_grid"><a class="anchor" href="#_grid"></a>7.1. Grid</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">import</span> React from <span class="string"><span class="delimiter">'</span><span class="content">react</span><span class="delimiter">'</span></span>;
@@ -1107,7 +1098,7 @@ function App({ cool }) {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-17 20:41:58 +0200
+Last updated 2020-09-17 20:46:20 +0200
 </div>
 </div>
 <style>

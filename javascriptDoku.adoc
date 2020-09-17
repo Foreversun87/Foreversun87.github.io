@@ -1,9 +1,6 @@
 // Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
 include::components/header.adoc[]
 
-== Asciidoc 
-http://127.0.0.1:5500/Dokumentationen/Technische%20Dokumentationen/AsciiDocTutorial/AsciiTutorial.html[Link]
-
 // Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
 include::components/algorithmus.adoc[]
 
