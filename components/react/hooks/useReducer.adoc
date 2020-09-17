@@ -1,0 +1,51 @@
+==== useReducer
+https://www.youtube.com/watch?v=kK_Wqx3RnHk[YOUTUBE] https://www.udemy.com/course/modern-react-bootcamp/learn/lecture/14541146#overview[UDEMY]
+
+[source, javascript]
+----
+import React from 'react';
+import './App.css';
+
+const ACTION = {
+  INCREMENT: "INCREMENT",
+  DECREMENT: "DECREMENT",
+  SET_COUNT: "SET_COUNT"
+}
+
+function reducer(state, action) {
+  console.log(action);
+  switch (action.type) {
+    case ACTION.INCREMENT: return { count: state.count + 1 };
+    case ACTION.DECREMENT: return { count: state.count - 1 };
+    case ACTION.SET_COUNT: return { count: action.payload };
+    default: return state;
+  }
+}
+
+function App() {
+  const [state, dispatch] = React.useReducer(reducer, { count: 1 });
+  const [input, setInput] = React.useState("");
+  const submit = (e) => {
+    e.preventDefault();
+    dispatch({
+      type: ACTION.SET_COUNT,
+      payload: input
+    })
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>{state.count}</h1>
+        <button onClick={() => dispatch({ type: ACTION.INCREMENT })} >count increment</button>
+        <button onClick={() => dispatch({ type: ACTION.DECREMENT })} >count decrement</button>
+        <form onSubmit={submit} >
+          <input onChange={(e) => setInput(e.target.value)} type="text" value={input} />
+        </form>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+----

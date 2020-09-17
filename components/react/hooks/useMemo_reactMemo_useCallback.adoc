@@ -1,0 +1,3 @@
+==== use vs. react-memo 
+
+https://www.youtube.com/watch?v=uojLJFt9SzY[YOUTUBE]

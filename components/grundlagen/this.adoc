@@ -1,0 +1,41 @@
+=== this
+[source,javascript]
+----
+// Einfaches Beispiel
+const person = {
+    firstName: "Max", // Objekteigenschaft
+    getFirstName: function(){
+        return this.firstName; // this bezieht sich auf den Ausführungskontext hier Object person
+    }
+}
+console.log(person.getFirstName()); // Ausgabe: Max
+
+// globalThis.firstName = "Global"; // Eigenschaft firstName an das globalThis-Objects zuweisen
+function getFirstNameGlobal(){
+    return this.firstName // this = Im window.object befindet sich keine Variable firstName
+}
+console.log(getFirstNameGlobal()); // Ausgabe: undefinded
+
+//#####  Funktionen als Konstruktorfunktionen #####//
+function Album(title){
+    this.title = title;
+}
+const album = new Album("Love is in the air");
+console.log(album);
+----
+
+==== bind
+[source,javascript]
+----
+include::../../js/javascriptBuch/listening2_30.js[]
+----
+
+++++
+<iframe
+     src="https://codesandbox.io/embed/cool-dijkstra-mpo90?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="This"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+++++

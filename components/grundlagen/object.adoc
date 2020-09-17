@@ -1,0 +1,16 @@
+=== Objects
+
+
+[source,javascript]
+----
+fnCon = () => {
+    const a = function(a,b) { console.log(a+b)} // a = Funktionsausdruck
+    const b = { // b = Objekterzeugung
+        d: a, // d = Die Objekteigenschaft d bekommt den Funktionsausdruck a zugewiesen
+        c: (a,e) => {b.d(a,e)} // c = Die Objektmethode c, welche eine Funktion übergeben bekommt
+    }   
+    b.c(1,2); //Aufruf der Object-Methode b.c() aus dem Objekt b
+}
+
+fnCon();
+----

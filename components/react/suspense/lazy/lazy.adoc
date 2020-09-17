@@ -1,0 +1,24 @@
+=== React.lazy
+
+https://www.youtube.com/watch?v=00gQyXRL7KI
+
+.Mit React.lazy
+[source,javascript]
+----
+include::with.jsx[]
+----
+
+image::react/lazy/with.png[]
+
+.Ohne React.lazy
+[source,javascript]
+----
+include::without.jsx[]
+----
+
+image::react/lazy/without.png[]
+
+[NOTE]
+====
+Wichtig ist, das für jeden *React.lazy* extra chunk-Dateien erstellt werden, was die einzelnen chunks nicht so gigantisch werden lässt!
+====

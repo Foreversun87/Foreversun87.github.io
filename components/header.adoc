@@ -1,0 +1,25 @@
+//---- Datenstruktur -------//
+:imagesdir: ./images
+:iconsdir: ./icons
+:stylesdir: ./styles
+:scriptsdir: ./js
+
+// :stylesheet: asciidoctor.css // Einbindung CSS
+// coderay ==> extra ruby // highlightjs // prettify // pygments ==> extra ruby // rouge
+:source-highlighter: coderay
+:icons: font
+:stem: latexmath
+
+//------- Inhaltsverzeichnis --------- //
+:toc: left
+:toclevels: 3
+:toc-title: Funktionen
+// :toc-placement!: 
+:sectanchors:
+:numbered:
+toc::[]
+
+// Für Abbildungsverzeichnis und Literaturverzeichnis
+:counter: image-counter: 0
+:counter: table-number: 0
+
