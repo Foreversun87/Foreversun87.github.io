@@ -1,6 +1,0 @@
-== Funktionale Programmierung
-
-[source,javascript]
-----
-include::../js/funktionaleProgrammierung.js[]
-----

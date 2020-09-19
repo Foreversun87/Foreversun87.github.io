@@ -1,7 +1,0 @@
-== Mathematik
-
-// Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
-include::mathematik/arithmetik.adoc[]
-
-// Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
-include::mathematik/function.adoc[]

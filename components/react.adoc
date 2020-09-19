@@ -1,7 +1,0 @@
-== React
-
-// Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
-include::react/hooks/hooks.adoc[]
-
-// Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
-include::react/suspense/lazy/lazy.adoc[]

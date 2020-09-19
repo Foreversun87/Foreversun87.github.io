@@ -1,0 +1,13 @@
+=== Exclusives Oder
+
+[source,javascript]
+----
+function XOR(a, b) {
+    if ((a && !b) || (!a && b)) {
+        console.log("XOR§");
+    }
+}
+----
+
+
+

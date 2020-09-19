@@ -1,7 +1,0 @@
-== Material-Ui 
-
-=== Grid
-[source,javascript]
-----
-include::../js/materialuiGrid.jsx[]
-----

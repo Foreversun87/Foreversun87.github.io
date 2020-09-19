@@ -1,0 +1,73 @@
+== Context API
+Für das Globale Statemanagement, ähnlich wie Redux. _MathContext.jsx_ steckt die Funktionalität. _App.jsx_ ist das Elternelement bzw. Root-Element und _Child.jsx_ das Kindelement welches Zugriff auf _MathContext.jsx_ hat und auch alle weiteren untergeordnenten Kind-Elemente.
+
+=== Einfaches Beispiel
+
+.MathContext.jsx
+[source,javascript]
+----
+import React from "react";
+export const MathContext = React.createContext(); 
+export const MathProvider = (props) =>{
+    const [state, setState] = React.useState([1,2,3]);
+    const addNumberToState = () => {
+      let number = state[state.length - 1];
+      setState([...state, number + 1]);
+    }
+    return(
+      <MathContext.Provider value={{state, addNumberToState}}>
+        {props.children}
+      </MathContext.Provider>
+    )
+  }
+----
+
+.App.jsx
+[source,javascript]
+----
+import React from 'react';
+import './App.css';
+import Child from './Child';
+import {MathProvider} from "./MathContext";
+
+function App() {
+  return (
+    <MathProvider>
+      <Child />
+    </MathProvider>
+  );
+}
+
+export default App;
+----
+
+[NOTE]
+====
+Durch den Provider wird festgelegt, welche Komponenten Zugriff auf die globale States haben
+====
+
+
+
+.Child.jsx
+_React.useContext_ ist der alternative Hook zur _MathContext.Consumer_-Methotik, welche bei Class-Components verwendet wird.
+[source,javascript]
+----
+import React from "react";
+import { MathContext } from "./MathContext";
+export default function Child(props) {
+    const { state, addNumberToState } = React.useContext(MathContext);
+    console.log(state);
+    return (
+        <div className="App">
+            <button onClick={addNumberToState}>click to add the next "+1-Number"</button>
+            <header className="App-header">
+                {state.map(e => {
+                    return (
+                        <p key={e}>{e}</p>
+                    )
+                })}
+            </header>
+        </div>
+    )
+}
+----

@@ -1,5 +1,0 @@
-=== Sort
-[source,javascript]
-----
-include::sort.js[]
-----

@@ -1,4 +1,0 @@
-== Algorithmus
-
-// Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
-include::algorithmus/sort/sort.adoc[]

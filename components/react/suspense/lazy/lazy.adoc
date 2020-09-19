@@ -1,4 +1,4 @@
-=== React.lazy
+== React.lazy
 
 https://www.youtube.com/watch?v=00gQyXRL7KI
 

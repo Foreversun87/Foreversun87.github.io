@@ -1,4 +1,4 @@
-==== class vs. hooks
+=== class vs. hooks
 [source,javascript]
 ----
 include::classVsHooks.js[]

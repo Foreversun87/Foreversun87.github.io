@@ -1,0 +1,5 @@
+// Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
+include::components/functions/header.adoc[]
+
+// Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
+include::components/functions/funktionaleProgrammierung.adoc[]
