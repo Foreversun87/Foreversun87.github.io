@@ -1,22 +1,23 @@
 == React.lazy
 
-https://www.youtube.com/watch?v=00gQyXRL7KI
+https://www.youtube.com/watch?v=00gQyXRL7KI[Video]
 
 .Mit React.lazy
-[source,javascript]
-----
-include::with.jsx[]
-----
+[source, javascript]
+--
+include::with.js[]
+--
 
-image::react/lazy/with.png[]
+image::./lazy/with.png[]
+
 
 .Ohne React.lazy
-[source,javascript]
-----
-include::without.jsx[]
-----
+[source, javascript]
+--
+include::without.js[]
+--
 
-image::react/lazy/without.png[]
+image::./lazy/without.png[]
 
 [NOTE]
 ====

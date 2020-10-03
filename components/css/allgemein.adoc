@@ -1,0 +1,6 @@
+== Allgemeine Informationen
+=== Design-Werkzeuge
+.Links
+* https://blog.kulturbanause.de/2017/08/einstieg-in-sketch/[Sketch]
+* https://www.youtube.com/watch?v=2uoWLJmSkCE[Figma-Youtube]
+* https://instrktiv.com/de/software-technische-dokumentation/[Technische Dokumentation]

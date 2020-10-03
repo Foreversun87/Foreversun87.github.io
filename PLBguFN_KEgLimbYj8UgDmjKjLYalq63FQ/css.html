@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Hooks</title>
+<title>Allgemeine Informationen</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,21 +440,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <body class="article toc2 toc-left">
 <div id="header">
 <div id="toc" class="toc2">
-<div id="toctitle">React</div>
+<div id="toctitle">CSS</div>
 <ul class="sectlevel1">
-<li><a href="#_hooks">1. Hooks</a>
+<li><a href="#_allgemeine_informationen">1. Allgemeine Informationen</a>
 <ul class="sectlevel2">
-<li><a href="#_class_vs_hooks">1.1. class vs. hooks</a></li>
-<li><a href="#_usereducer">1.2. useReducer</a></li>
-<li><a href="#_usereducer_usecontext">1.3. useReducer + useContext</a></li>
-<li><a href="#_use_vs_react_memo">1.4. use vs. react-memo</a></li>
-<li><a href="#_advance">1.5. advance</a></li>
+<li><a href="#_design_werkzeuge">1.1. Design-Werkzeuge</a></li>
 </ul>
 </li>
-<li><a href="#_react_lazy">2. React.lazy</a></li>
-<li><a href="#_context_api">3. Context API</a>
+<li><a href="#_css_grid">2. CSS-Grid</a></li>
+<li><a href="#_material_ui">3. Material-Ui</a>
 <ul class="sectlevel2">
-<li><a href="#_einfaches_beispiel">3.1. Einfaches Beispiel</a></li>
+<li><a href="#_grid">3.1. Grid</a></li>
 </ul>
 </li>
 </ul>
@@ -463,283 +459,202 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="content">
 <!-- toc disabled -->
 <div class="sect1">
-<h2 id="_hooks"><a class="anchor" href="#_hooks"></a>1. Hooks</h2>
+<h2 id="_allgemeine_informationen"><a class="anchor" href="#_allgemeine_informationen"></a>1. Allgemeine Informationen</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_class_vs_hooks"><a class="anchor" href="#_class_vs_hooks"></a>1.1. class vs. hooks</h3>
+<h3 id="_design_werkzeuge"><a class="anchor" href="#_design_werkzeuge"></a>1.1. Design-Werkzeuge</h3>
+<div class="ulist">
+<div class="title">Links</div>
+<ul>
+<li>
+<p><a href="https://blog.kulturbanause.de/2017/08/einstieg-in-sketch/">Sketch</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=2uoWLJmSkCE">Figma-Youtube</a></p>
+</li>
+<li>
+<p><a href="https://instrktiv.com/de/software-technische-dokumentation/">Technische Dokumentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_css_grid"><a class="anchor" href="#_css_grid"></a>2. CSS-Grid</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">Links</div>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=68O6eOGAGqA">Youtube</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=705XCEruZFs">Youtube</a></p>
+</li>
+</ul>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="javascript"><span class="comment">//FunctionalProgramming</span>
-<span class="reserved">import</span> React, {useState} from <span class="string"><span class="delimiter">&quot;</span><span class="content">react</span><span class="delimiter">&quot;</span></span>;
-<span class="reserved">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="function">CounterHooks</span>() {
-    <span class="comment">// 1. params: the piece of state</span>
-    <span class="comment">// 2. params: function to update that  piece of state</span>
-    const [count, setCount] = useState(<span class="string"><span class="delimiter">&quot;</span><span class="content">Ich hasse das!</span><span class="delimiter">&quot;</span></span>)
-    <span class="keyword">return</span> (
-        <span class="tag">&lt;div&gt;</span>
-            <span class="tag">&lt;h1&gt;</span>The Count is: {count}<span class="tag">&lt;/h1&gt;</span>
-            <span class="tag">&lt;button</span> <span class="attribute-name">onClick</span>=<span class="error">{</span><span class="error">(</span><span class="error">)</span> <span class="error">=</span><span class="tag">&gt;</span> setCount(count + 1)} <span class="error">&gt;</span>Add 1<span class="tag">&lt;/button&gt;</span>
-        <span class="tag">&lt;/div&gt;</span>
-    )
-}
+<pre class="CodeRay highlight"><code data-lang="html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attribute-name">lang</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">en</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attribute-name">charset</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">UTF-8</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">viewport</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">content</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">width=device-width, initial-scale=1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Document<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;style&gt;</span>
+<span class="inline">    <span class="tag">*</span> {
+        <span class="key">margin</span>: <span class="float">0px</span>;
+    }
 
-<span class="comment">//ClassProgramming</span>
-<span class="reserved">import</span> React from <span class="string"><span class="delimiter">&quot;</span><span class="content">react</span><span class="delimiter">&quot;</span></span>;
-<span class="reserved">export</span> <span class="keyword">default</span> <span class="reserved">class</span> Counter <span class="reserved">extends</span> React.Component{
-    constructor(props){
-        <span class="reserved">super</span>(props);
-        <span class="local-variable">this</span>.state = {
-            <span class="key">count</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Ich hasse das!</span><span class="delimiter">&quot;</span></span>
+    <span class="pseudo-class">:root</span> {
+        <span class="error">-</span><span class="key">-main-radius</span>: <span class="float">5px</span>;
+        <span class="error">-</span><span class="key">-main-padding</span>: <span class="float">5px</span>;
+    }
+
+    <span class="class">.container</span> {
+        <span class="key">display</span>: <span class="value">grid</span>;
+        <span class="key">height</span>: <span class="float">100</span><span class="value">vh</span>;
+        <span class="key">grid-template-columns</span>: <span class="float">1</span><span class="value">fr</span> <span class="float">1</span><span class="value">fr</span> <span class="float">1</span><span class="value">fr</span> <span class="float">1</span><span class="value">fr</span>;
+        <span class="key">grid-template-rows</span>: <span class="float">0.2</span><span class="value">fr</span> <span class="float">1.5</span><span class="value">fr</span> <span class="float">1.2</span><span class="value">fr</span> <span class="float">0.8</span><span class="value">fr</span>;
+        <span class="key">grid-template-areas</span>:
+            <span class="string"><span class="delimiter">&quot;</span><span class="content">nav nav nav nav</span><span class="delimiter">&quot;</span></span>
+            <span class="string"><span class="delimiter">&quot;</span><span class="content">sidebar main main main</span><span class="delimiter">&quot;</span></span>
+            <span class="string"><span class="delimiter">&quot;</span><span class="content">sidebar content1 content2 content3</span><span class="delimiter">&quot;</span></span>
+            <span class="string"><span class="delimiter">&quot;</span><span class="content">sidebar footer footer footer </span><span class="delimiter">&quot;</span></span>;
+        <span class="key">grid-gap</span>: <span class="float">0.2</span><span class="value">rem</span>;
+    }
+
+    <span class="tag">nav</span> {
+        <span class="key">background</span>: <span class="color">#a7ffeb</span>;
+        <span class="key">grid-area</span>: <span class="value">nav</span>;
+        <span class="key">border-radius</span>: <span class="error">v</span><span class="error">a</span><span class="error">r</span>(<span class="error">-</span><span class="value">-main-radius</span>);
+        <span class="key">padding-top</span>: <span class="error">v</span><span class="error">a</span><span class="error">r</span>(<span class="error">-</span><span class="value">-main-padding</span>);
+    }
+
+    <span class="tag">main</span> {
+        <span class="key">background</span>: <span class="color">#84ffff</span>;
+        <span class="key">grid-area</span>: <span class="value">main</span>;
+    }
+
+    <span class="id">#sidebar</span> {
+        <span class="key">background</span>: <span class="color">#18ffff</span>;
+        <span class="key">grid-area</span>: <span class="value">sidebar</span>;
+    }
+
+    <span class="id">#content1</span> {
+        <span class="key">background</span>: <span class="color">#6fffd2</span>;
+        <span class="key">grid-area</span>: <span class="value">content1</span>;
+    }
+
+    <span class="id">#content2</span> {
+        <span class="key">background</span>: <span class="color">#64ffda</span>;
+        <span class="key">grid-area</span>: <span class="value">content2</span>;
+    }
+
+    <span class="id">#content3</span> {
+        <span class="key">background</span>: <span class="color">#73ffba</span>;
+        <span class="key">grid-area</span>: <span class="value">content3</span>;
+    }
+
+    <span class="tag">footer</span> {
+        <span class="key">background</span>: <span class="color">#1de9b6</span>;
+        <span class="key">grid-area</span>: <span class="value">footer</span>;
+    }
+
+    <span class="directive">@media</span> <span class="type">only</span> <span class="error">s</span><span class="error">c</span><span class="error">r</span><span class="error">e</span><span class="error">e</span><span class="error">n</span> <span class="error">a</span><span class="error">n</span><span class="error">d</span> (<span class="error">m</span><span class="error">a</span><span class="error">x</span><span class="error">-</span><span class="error">w</span><span class="error">i</span><span class="error">d</span><span class="error">t</span><span class="error">h</span>: <span class="float">550px</span>) {
+        <span class="class">.container</span> {
+            <span class="key">grid-template-columns</span>: <span class="float">1</span><span class="value">fr</span>;
+            <span class="key">grid-template-rows</span>: <span class="float">0.4</span><span class="value">fr</span> <span class="float">0.4</span><span class="value">fr</span> <span class="float">2.2</span><span class="value">fr</span> <span class="float">1.2</span><span class="value">fr</span> <span class="float">1.2</span><span class="value">fr</span> <span class="float">1.2</span><span class="value">fr</span> <span class="float">1</span><span class="value">fr</span>;
+            <span class="key">grid-template-areas</span>:
+                <span class="string"><span class="delimiter">&quot;</span><span class="content">nav</span><span class="delimiter">&quot;</span></span>
+                <span class="string"><span class="delimiter">&quot;</span><span class="content">sidebar</span><span class="delimiter">&quot;</span></span>
+                <span class="string"><span class="delimiter">&quot;</span><span class="content">content1</span><span class="delimiter">&quot;</span></span>
+                <span class="string"><span class="delimiter">&quot;</span><span class="content">content2</span><span class="delimiter">&quot;</span></span>
+                <span class="string"><span class="delimiter">&quot;</span><span class="content">content3</span><span class="delimiter">&quot;</span></span>
+                <span class="string"><span class="delimiter">&quot;</span><span class="content">main</span><span class="delimiter">&quot;</span></span>
+                <span class="string"><span class="delimiter">&quot;</span><span class="content">footer</span><span class="delimiter">&quot;</span></span>;
         }
-    }
-    render(){
-        <span class="keyword">return</span>(
-            <span class="tag">&lt;div&gt;</span>
-                <span class="tag">&lt;h1&gt;</span>The count is: {this.state.count}<span class="tag">&lt;/h1&gt;</span>
-                <span class="tag">&lt;button</span> <span class="attribute-name">onClick</span>=<span class="error">{</span><span class="error">(</span><span class="error">)</span> <span class="error">=</span><span class="tag">&gt;</span> this.setState({count: this.count + 1})}<span class="error">&gt;</span>Add 1<span class="tag">&lt;/button&gt;</span>
-            <span class="tag">&lt;/div&gt;</span>
-        )
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_usereducer"><a class="anchor" href="#_usereducer"></a>1.2. useReducer</h3>
-<div class="paragraph">
-<p><a href="https://www.youtube.com/watch?v=kK_Wqx3RnHk">YOUTUBE</a> <a href="https://www.udemy.com/course/modern-react-bootcamp/learn/lecture/14541146#overview">UDEMY</a></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">import</span> React from <span class="string"><span class="delimiter">'</span><span class="content">react</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> <span class="string"><span class="delimiter">'</span><span class="content">./App.css</span><span class="delimiter">'</span></span>;
+    }</span>
+<span class="tag">&lt;/style&gt;</span>
 
-const ACTION = {
-  <span class="key">INCREMENT</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">INCREMENT</span><span class="delimiter">&quot;</span></span>,
-  <span class="key">DECREMENT</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">DECREMENT</span><span class="delimiter">&quot;</span></span>,
-  <span class="key">SET_COUNT</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">SET_COUNT</span><span class="delimiter">&quot;</span></span>
-}
-
-<span class="keyword">function</span> <span class="function">reducer</span>(state, action) {
-  console.log(action);
-  <span class="keyword">switch</span> (action.type) {
-    <span class="keyword">case</span> ACTION.INCREMENT: <span class="keyword">return</span> { <span class="key">count</span>: state.count + <span class="integer">1</span> };
-    <span class="keyword">case</span> ACTION.DECREMENT: <span class="keyword">return</span> { <span class="key">count</span>: state.count - <span class="integer">1</span> };
-    <span class="keyword">case</span> ACTION.SET_COUNT: <span class="keyword">return</span> { <span class="key">count</span>: action.payload };
-    <span class="keyword">default</span>: <span class="keyword">return</span> state;
-  }
-}
-
-<span class="keyword">function</span> <span class="function">App</span>() {
-  const [state, dispatch] = React.useReducer(reducer, { <span class="key">count</span>: <span class="integer">1</span> });
-  const [input, setInput] = React.useState(<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>);
-  const submit = (e) =&gt; {
-    e.preventDefault();
-    dispatch({
-      <span class="key">type</span>: ACTION.SET_COUNT,
-      <span class="key">payload</span>: input
-    })
-  }
-
-  <span class="keyword">return</span> (
-    <span class="tag">&lt;div</span> <span class="attribute-name">className</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">App</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-      <span class="tag">&lt;header</span> <span class="attribute-name">className</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">App-header</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-        <span class="tag">&lt;h1&gt;</span>{state.count}<span class="tag">&lt;/h1&gt;</span>
-        <span class="tag">&lt;button</span> <span class="attribute-name">onClick</span>=<span class="error">{</span><span class="error">(</span><span class="error">)</span> <span class="error">=</span><span class="tag">&gt;</span> dispatch({ type: ACTION.INCREMENT })} <span class="error">&gt;</span>count increment<span class="tag">&lt;/button&gt;</span>
-        <span class="tag">&lt;button</span> <span class="attribute-name">onClick</span>=<span class="error">{</span><span class="error">(</span><span class="error">)</span> <span class="error">=</span><span class="tag">&gt;</span> dispatch({ type: ACTION.DECREMENT })} <span class="error">&gt;</span>count decrement<span class="tag">&lt;/button&gt;</span>
-        <span class="tag">&lt;form</span> <span class="attribute-name">onSubmit</span>=<span class="error">{</span><span class="attribute-value">submit</span><span class="error">}</span> <span class="tag">&gt;</span>
-          <span class="tag">&lt;input</span> <span class="attribute-name">onChange</span>=<span class="error">{</span><span class="error">(</span><span class="attribute-value">e</span><span class="error">)</span> <span class="error">=</span><span class="tag">&gt;</span> setInput(e.target.value)} type=&quot;text&quot; value={input} /<span class="error">&gt;</span>
-        <span class="tag">&lt;/form&gt;</span>
-      <span class="tag">&lt;/header&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;nav&gt;</span>Navbar<span class="tag">&lt;/nav&gt;</span>
+        <span class="tag">&lt;main&gt;</span>Main<span class="tag">&lt;/main&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">sidebar</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Sidebar<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">content1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Content1<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">content2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Content2<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">content3</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Content3<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;footer&gt;</span>Footer<span class="tag">&lt;/footer&gt;</span>
     <span class="tag">&lt;/div&gt;</span>
-  );
-}
+<span class="tag">&lt;/body&gt;</span>
 
-<span class="reserved">export</span> <span class="keyword">default</span> App;</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_usereducer_usecontext"><a class="anchor" href="#_usereducer_usecontext"></a>1.3. useReducer + useContext</h3>
-<div class="paragraph">
-<p><a href="https://www.youtube.com/watch?v=cPE_tpCRyRg">YOUTUBE</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_use_vs_react_memo"><a class="anchor" href="#_use_vs_react_memo"></a>1.4. use vs. react-memo</h3>
-<div class="paragraph">
-<p><a href="https://www.youtube.com/watch?v=uojLJFt9SzY">YOUTUBE</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_advance"><a class="anchor" href="#_advance"></a>1.5. advance</h3>
-<div class="paragraph">
-<p><a href="https://www.youtube.com/watch?v=J-g9ZJha8FE">YOUTUBE</a></p>
+<span class="tag">&lt;/html&gt;</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_react_lazy"><a class="anchor" href="#_react_lazy"></a>2. React.lazy</h2>
+<h2 id="_material_ui"><a class="anchor" href="#_material_ui"></a>3. Material-Ui</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><a href="https://www.youtube.com/watch?v=00gQyXRL7KI" class="bare">https://www.youtube.com/watch?v=00gQyXRL7KI</a></p>
-</div>
-<div class="listingblock">
-<div class="title">Mit React.lazy</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">import</span> React from <span class="string"><span class="delimiter">'</span><span class="content">react</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> <span class="string"><span class="delimiter">'</span><span class="content">./App.css</span><span class="delimiter">'</span></span>;
-<span class="comment">// React.lazy gibt ein Promise zurück, welches mit</span>
-<span class="comment">// React.Suspense fallback={&lt;Component /&gt;} bedient wird.</span>
-const Tag = React.lazy(() =&gt; <span class="reserved">import</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">./Tag</span><span class="delimiter">&quot;</span></span>) );
-
-<span class="keyword">function</span> <span class="function">App</span>() {
-  <span class="keyword">return</span> (
-    <span class="tag">&lt;div</span> <span class="attribute-name">className</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">App</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-      <span class="tag">&lt;header</span> <span class="attribute-name">className</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">App-header</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-        {/*
-          React.Suspense wird von React.lazy benötigt
-        */}
-        <span class="tag">&lt;React.Suspense</span> <span class="attribute-name">fallback</span>=<span class="error">{</span><span class="error">&lt;</span><span class="attribute-value">div</span><span class="tag">&gt;</span>loading...<span class="tag">&lt;/div&gt;</span>}&gt;
-        <span class="tag">&lt;Tag</span> <span class="tag">/&gt;</span>
-        &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">React.Suspense&gt;
-      &lt;</span><span class="delimiter">/</span></span>header&gt;
-    &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">div&gt;
-  );
-}</span></span></code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="./images/react/lazy/with.png" alt="with">
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Ohne React.lazy</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">import</span> React from <span class="string"><span class="delimiter">'</span><span class="content">react</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> <span class="string"><span class="delimiter">'</span><span class="content">./App.css</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> Tag from <span class="string"><span class="delimiter">&quot;</span><span class="content">./Tag</span><span class="delimiter">&quot;</span></span>;
-
-<span class="keyword">function</span> <span class="function">App</span>() {
-  <span class="keyword">return</span> (
-    <span class="tag">&lt;div</span> <span class="attribute-name">className</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">App</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-      <span class="tag">&lt;header</span> <span class="attribute-name">className</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">App-header</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-        <span class="tag">&lt;Tag</span> <span class="tag">/&gt;</span>
-      <span class="tag">&lt;/header&gt;</span>
-    <span class="tag">&lt;/div&gt;</span>
-  );
-}
-
-<span class="reserved">export</span> <span class="keyword">default</span> App;</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="./images/react/lazy/without.png" alt="without">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Wichtig ist, das für jeden <strong>React.lazy</strong> extra chunk-Dateien erstellt werden, was die einzelnen chunks nicht so gigantisch werden lässt!</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_context_api"><a class="anchor" href="#_context_api"></a>3. Context API</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Für das Globale Statemanagement, ähnlich wie Redux. <em>MathContext.jsx</em> steckt die Funktionalität. <em>App.jsx</em> ist das Elternelement bzw. Root-Element und <em>Child.jsx</em> das Kindelement welches Zugriff auf <em>MathContext.jsx</em> hat und auch alle weiteren untergeordnenten Kind-Elemente.</p>
-</div>
 <div class="sect2">
-<h3 id="_einfaches_beispiel"><a class="anchor" href="#_einfaches_beispiel"></a>3.1. Einfaches Beispiel</h3>
+<h3 id="_grid"><a class="anchor" href="#_grid"></a>3.1. Grid</h3>
 <div class="listingblock">
-<div class="title">MathContext.jsx</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">import</span> React from <span class="string"><span class="delimiter">&quot;</span><span class="content">react</span><span class="delimiter">&quot;</span></span>;
-<span class="reserved">export</span> const MathContext = React.createContext();
-<span class="reserved">export</span> const MathProvider = (props) =&gt;{
-    const [state, setState] = React.useState([<span class="integer">1</span>,<span class="integer">2</span>,<span class="integer">3</span>]);
-    const addNumberToState = () =&gt; {
-      let number = state[state.length - <span class="integer">1</span>];
-      setState([...state, number + <span class="integer">1</span>]);
-    }
-    <span class="keyword">return</span>(
-      &lt;MathContext.Provider value={{state, addNumberToState}}&gt;
-        {props.children}
-      &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">MathContext.Provider&gt;
-    )
-  }</span></span></code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">App.jsx</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">import</span> React from <span class="string"><span class="delimiter">'</span><span class="content">react</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { Grid, Button } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@material-ui/core</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> { makeStyles } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@material-ui/core/styles</span><span class="delimiter">&quot;</span></span>;
 <span class="reserved">import</span> <span class="string"><span class="delimiter">'</span><span class="content">./App.css</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> Child from <span class="string"><span class="delimiter">'</span><span class="content">./Child</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> {MathProvider} from <span class="string"><span class="delimiter">&quot;</span><span class="content">./MathContext</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> ReactDOM from <span class="string"><span class="delimiter">'</span><span class="content">react-dom</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> <span class="string"><span class="delimiter">'</span><span class="content">./index.css</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> * as serviceWorker from <span class="string"><span class="delimiter">'</span><span class="content">./serviceWorker</span><span class="delimiter">'</span></span>;
 
-<span class="keyword">function</span> <span class="function">App</span>() {
+<span class="comment">// makeStylesHook Definition</span>
+const useStyles = makeStyles(theme =&gt; ({
+  <span class="key">buttonText</span>: cool =&gt; {
+      <span class="keyword">return</span> {
+          <span class="key">color</span>: cool ? <span class="string"><span class="delimiter">&quot;</span><span class="content">blue</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">red</span><span class="delimiter">&quot;</span></span>,
+          [theme.breakpoints.up(<span class="string"><span class="delimiter">&quot;</span><span class="content">sm</span><span class="delimiter">&quot;</span></span>)]: {
+              <span class="key">backgroundColor</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">cyan</span><span class="delimiter">&quot;</span></span>
+          }
+      };
+  }
+}));
+
+ReactDOM.render(
+  &lt;React.StrictMode&gt;
+    <span class="tag">&lt;App</span> <span class="attribute-name">cool</span>=<span class="error">{</span><span class="attribute-value">true</span><span class="error">}</span> <span class="tag">/&gt;</span>
+  &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">React.StrictMode&gt;,
+  document.getElementById('root')
+);
+serviceWorker.unregister();
+
+function App({ cool }) {
+  </span><span class="delimiter">/</span></span>/ makeStylesHook Ausf<span class="error">ü</span>hrung mit <span class="error">Ü</span>bergabe der Props <span class="keyword">in</span> Destrukturierter Form
+  const classes = useStyles(cool);
   <span class="keyword">return</span> (
-    <span class="tag">&lt;MathProvider&gt;</span>
-      <span class="tag">&lt;Child</span> <span class="tag">/&gt;</span>
-    <span class="tag">&lt;/MathProvider&gt;</span>
+    <span class="tag">&lt;Grid</span> <span class="attribute-name">container</span> <span class="attribute-name">direction</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">column</span><span class="delimiter">&quot;</span></span> <span class="tag">&gt;</span>
+      <span class="tag">&lt;Grid</span> <span class="attribute-name">item</span> <span class="tag">&gt;</span>This will be the header<span class="tag">&lt;/Grid&gt;</span>
+      <span class="tag">&lt;Grid</span> <span class="attribute-name">item</span> <span class="attribute-name">container</span> <span class="tag">&gt;</span>
+        <span class="tag">&lt;Grid</span> <span class="attribute-name">item</span> <span class="attribute-name">xs</span>=<span class="error">{</span><span class="attribute-value">0</span><span class="error">}</span> <span class="attribute-name">sm</span>=<span class="error">{</span><span class="attribute-value">2</span><span class="error">}</span> <span class="tag">/&gt;</span>
+        <span class="tag">&lt;Grid</span> <span class="attribute-name">item</span> <span class="attribute-name">xs</span>=<span class="error">{</span><span class="attribute-value">12</span><span class="error">}</span> <span class="attribute-name">sm</span>=<span class="error">{</span><span class="attribute-value">8</span><span class="error">}</span><span class="tag">&gt;</span>
+          This is where the content will be this is where the content will be end.
+          This is where the content will be this is where the content will be end.
+          This is where the content will be this is where the content will be end.
+        <span class="tag">&lt;/Grid&gt;</span>
+        <span class="tag">&lt;Grid</span> <span class="attribute-name">item</span> <span class="attribute-name">xs</span>=<span class="error">{</span><span class="attribute-value">0</span><span class="error">}</span> <span class="attribute-name">sm</span>=<span class="error">{</span><span class="attribute-value">2</span><span class="error">}</span> <span class="tag">/&gt;</span>
+        <span class="tag">&lt;Grid</span> <span class="attribute-name">item</span> <span class="attribute-name">xs</span>=<span class="error">{</span><span class="attribute-value">0</span><span class="error">}</span> <span class="attribute-name">sm</span>=<span class="error">{</span><span class="attribute-value">2</span><span class="error">}</span> <span class="tag">/&gt;</span>
+        <span class="tag">&lt;Grid</span> <span class="attribute-name">item</span> <span class="attribute-name">xs</span>=<span class="error">{</span><span class="attribute-value">12</span><span class="error">}</span> <span class="attribute-name">sm</span>=<span class="error">{</span><span class="attribute-value">8</span><span class="error">}</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;Button</span> <span class="attribute-name">className</span>=<span class="error">{</span><span class="attribute-value">classes.buttonText</span><span class="error">}</span> <span class="attribute-name">fullWidth</span> <span class="tag">&gt;</span>Hello Moto-Klick!<span class="tag">&lt;/Button&gt;</span>
+        <span class="tag">&lt;/Grid&gt;</span>
+        <span class="tag">&lt;Grid</span> <span class="attribute-name">item</span> <span class="attribute-name">xs</span>=<span class="error">{</span><span class="attribute-value">0</span><span class="error">}</span> <span class="attribute-name">sm</span>=<span class="error">{</span><span class="attribute-value">2</span><span class="error">}</span> <span class="tag">/&gt;</span>
+      &lt;<span class="regexp"><span class="delimiter">/</span><span class="content">Grid&gt;
+    &lt;</span><span class="delimiter">/</span></span>Grid&gt;
   );
 }
-
 <span class="reserved">export</span> <span class="keyword">default</span> App;</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Durch den Provider wird festgelegt, welche Komponenten Zugriff auf die globale States haben</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<div class="title">Child.jsx</div>
-<p><em>React.useContext</em> ist der alternative Hook zur <em>MathContext.Consumer</em>-Methotik, welche bei Class-Components verwendet wird.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">import</span> React from <span class="string"><span class="delimiter">&quot;</span><span class="content">react</span><span class="delimiter">&quot;</span></span>;
-<span class="reserved">import</span> { MathContext } from <span class="string"><span class="delimiter">&quot;</span><span class="content">./MathContext</span><span class="delimiter">&quot;</span></span>;
-<span class="reserved">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="function">Child</span>(props) {
-    const { state, addNumberToState } = React.useContext(MathContext);
-    console.log(state);
-    <span class="keyword">return</span> (
-        <span class="tag">&lt;div</span> <span class="attribute-name">className</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">App</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-            <span class="tag">&lt;button</span> <span class="attribute-name">onClick</span>=<span class="error">{</span><span class="attribute-value">addNumberToState</span><span class="error">}</span><span class="tag">&gt;</span>click to add the next &quot;+1-Number&quot;<span class="tag">&lt;/button&gt;</span>
-            <span class="tag">&lt;header</span> <span class="attribute-name">className</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">App-header</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-                {state.map(e =<span class="error">&gt;</span> {
-                    return (
-                        <span class="tag">&lt;p</span> <span class="attribute-name">key</span>=<span class="error">{</span><span class="attribute-value">e</span><span class="error">}</span><span class="tag">&gt;</span>{e}<span class="tag">&lt;/p&gt;</span>
-                    )
-                })}
-            <span class="tag">&lt;/header&gt;</span>
-        <span class="tag">&lt;/div&gt;</span>
-    )
-}</code></pre>
 </div>
 </div>
 </div>
@@ -748,7 +663,7 @@ const Tag = React.lazy(() =&gt; <span class="reserved">import</span>(<span class
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-19 20:10:12 +0200
+Last updated 2020-09-20 18:21:37 +0200
 </div>
 </div>
 <style>

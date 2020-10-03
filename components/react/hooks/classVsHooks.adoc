@@ -1,5 +1,5 @@
 === class vs. hooks
 [source,javascript]
-----
+--
 include::classVsHooks.js[]
-----
+--

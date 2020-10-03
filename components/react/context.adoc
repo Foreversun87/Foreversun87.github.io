@@ -5,7 +5,7 @@ Für das Globale Statemanagement, ähnlich wie Redux. _MathContext.jsx_ steckt d
 
 .MathContext.jsx
 [source,javascript]
-----
+--
 import React from "react";
 export const MathContext = React.createContext(); 
 export const MathProvider = (props) =>{
@@ -20,11 +20,11 @@ export const MathProvider = (props) =>{
       </MathContext.Provider>
     )
   }
-----
+--
 
 .App.jsx
 [source,javascript]
-----
+--
 import React from 'react';
 import './App.css';
 import Child from './Child';
@@ -39,7 +39,7 @@ function App() {
 }
 
 export default App;
-----
+--
 
 [NOTE]
 ====
@@ -51,7 +51,7 @@ Durch den Provider wird festgelegt, welche Komponenten Zugriff auf die globale S
 .Child.jsx
 _React.useContext_ ist der alternative Hook zur _MathContext.Consumer_-Methotik, welche bei Class-Components verwendet wird.
 [source,javascript]
-----
+--
 import React from "react";
 import { MathContext } from "./MathContext";
 export default function Child(props) {
@@ -70,4 +70,4 @@ export default function Child(props) {
         </div>
     )
 }
-----
+--

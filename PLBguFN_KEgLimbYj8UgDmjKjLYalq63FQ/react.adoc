@@ -1,11 +1,12 @@
 // Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
-include::components/react/header.adoc[]
+include::./../components/react/header.adoc[]
 
 // Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
-include::components/react/hooks/hooks.adoc[]
+include::./../components/react/dnd-beautiful/dnd.adoc[]
 
 // Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
-include::components/react/suspense/lazy/lazy.adoc[]
+include::./../components/react/hooks/hooks.adoc[]
 
 // Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
-include::components/react/context.adoc[]
+include::./../components/react/suspense/lazy/lazy.adoc[]
+

@@ -1,12 +1,12 @@
-//---- Datenstruktur -------//
-:imagesdir: ./images
+//Datenstruktur//
+:imagesdir: ./../images/react
 :iconsdir: ./icons
 :stylesdir: ./styles
 :scriptsdir: ./js
 
 // :stylesheet: asciidoctor.css // Einbindung CSS
 // coderay ==> extra ruby // highlightjs // prettify // pygments ==> extra ruby // rouge
-:source-highlighter: coderay
+:source-highlighter: highlightjs
 :icons: font
 :stem: latexmath
 
@@ -15,8 +15,7 @@
 :toclevels: 3
 :toc-title: React
 // :toc-placement!: 
-:sectanchors:
-:numbered:
+:numbered: 
 toc::[]
 
 // Für Abbildungsverzeichnis und Literaturverzeichnis
