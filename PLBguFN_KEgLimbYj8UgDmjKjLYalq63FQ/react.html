@@ -512,36 +512,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_sourcecode">1.1.2. Sourcecode</h4>
 <div class="listingblock">
+<div class="title">onDragEnd.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="javascript" class="language-javascript hljs">export const onDragEnd = (result, columns, setColumns) =&gt; {
+  const { destination, source } = result;
+  if (!destination) { return };
+
+  if (source.droppableId !== destination.droppableId) {
+    const sourceColumn = columns[source.droppableId];
+    const destColumn = columns[destination.droppableId];
+    const sourceTasks = [...sourceColumn.tasks];
+    const destTasks = [...destColumn.tasks];
+    const [removed] = sourceTasks.splice(source.index, 1);
+    destTasks.splice(destination.index, 0, removed);
+    setColumns({
+      ...columns,
+      [source.droppableId]: {
+        ...sourceColumn,
+        tasks: sourceTasks
+      },
+      [destination.droppableId]: {
+        ...destColumn,
+        tasks: destTasks
+      }
+    });
+  } else {
+    const column = columns[source.droppableId];
+    const copiedTasks = [...column.tasks];
+    const [removed] = copiedTasks.splice(source.index, 1);
+    copiedTasks.splice(destination.index, 0, removed);
+    setColumns({
+      ...columns,
+      [source.droppableId]: {
+        ...column,
+        tasks: copiedTasks
+      }
+    })
+  }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
 <div class="title">App.jsx</div>
 <div class="content">
 <pre class="highlightjs highlight"><code data-lang="javascript" class="language-javascript hljs">import React from 'react';
 import { DragDropContext } from "react-beautiful-dnd";
+import Column from "./Column";
+import {onDragEnd} "./onDragEnd";
+import {tasksDB} "./tasksDB";
+
+const columnsFromBackend = {
+  "column-1": {
+    id: "column-1",
+    title: "Mitarbeiter",
+    tasks: tasksDB
+  },
+  "column-2": {
+    id: "column-2",
+    title: "Auswahl",
+    tasks: []
+  },
+}
 
 function App() {
-  const [user, setUser] = React.useState(db);
+  const [columns, setColumns] = React.useState(columnsFromBackend);
   const [state, setState] = React.useState([]);
-
   //Dieser useEffect aktualisiert mein state. Das bedeutet, wenn der User seine Auswahl ändert, wird dementsprechenden "Meine Auswahl" als State aktualisiert
   React.useEffect(() =&gt; {
-    setState(() =&gt; { return user.columns["column-2"].taskIds });
-  }, [user.columns["column-2"].taskIds]);
-
-
-  // Achtung onDragEnd() ist in einem extra Abschnitt
-
+    console.log(columns["column-2"].tasks);
+    setState(columns["column-2"].tasks);
+  }, [columns]);
 
   return (
-    // Dies ist der Context, in dem sich die DragandDrop-Geschichte abspielen soll.
-      // Die onDragEnd-Methode ist der Dreh und Angelpunkt der ganzen Ausführungslogik
-    &lt;DragDropContext onDragEnd={onDragEnd}&gt;
+    &lt;DragDropContext onDragEnd={result =&gt; onDragEnd(result, columns, setColumns)}&gt;
       &lt;div style={{ display: "flex" }}&gt;
-
-        {/* user kommen aus Datenbank */}
-        {user.columnOrder.map(columnId =&gt; {
-          const column = user.columns[columnId];
-          const tasks = column.taskIds.map(taskId =&gt; user.tasks[taskId]);
+        {Object.entries(columns).map(([id, column]) =&gt; {
           return (
-            &lt;Column key={column.id} column={column} tasks={tasks}
+            &lt;Column key={id} column={column} tasks={tasks}
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center",
                 padding: "1rem", boxShadow: "5px 5px 8px #888888",
@@ -552,7 +599,9 @@ function App() {
       &lt;/div &gt;
     &lt;/DragDropContext&gt;
   );
-}</code></pre>
+}
+
+export default App;</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -560,29 +609,25 @@ function App() {
 <div class="content">
 <pre class="highlightjs highlight"><code data-lang="javascript" class="language-javascript hljs">import React from "react";
 import Task from "./Task";
-//Elternelement: Hier möchte ich etwas ablegen
 import { Droppable } from "react-beautiful-dnd";
-
-export default function Column({ column, tasks }) {
+export default function Column({ column }) {
     return (
-        &lt;div style={{display: "flex", flexDirection: "column"}}&gt;
+        &lt;div style={{ display: "flex", flexDirection: "column" }}&gt;
             &lt;div&gt;
                 {column.title}
             &lt;/div&gt;
             &lt;Droppable droppableId={column.id}&gt;
                 {provided =&gt; (
                     // Dieses &lt;div&gt; muss sein, sonst Probleme mit innerRef
-                    &lt;div&gt;
-                        &lt;div
-                            style={{minHeight: "100px"}}
-                            ref={provided.innerRef}
-                            {...provided.droppableProps}
-                        &gt;
-                            {tasks.map((task, index) =&gt; {
-                                return (&lt;Task key={task.id} task={task} index={index} /&gt;);
-                            })}
-                            {provided.placeholder}
-                        &lt;/div&gt;
+                    &lt;div
+                        {...provided.droppableProps}
+                        ref={provided.innerRef}
+                        style={{ minHeight: "100px" }}
+                    &gt;
+                        {column.tasks.map((task, index) =&gt; {
+                            return (&lt;Task key={task.id} task={task} index={index} /&gt;);
+                        })}
+                        {provided.placeholder}
                     &lt;/div&gt;
                 )}
             &lt;/Droppable&gt;
@@ -595,8 +640,8 @@ export default function Column({ column, tasks }) {
 <div class="title">Task.jsx</div>
 <div class="content">
 <pre class="highlightjs highlight"><code data-lang="javascript" class="language-javascript hljs">import React from "react";
-// Kind-Element: Was möchte ich bewegen?
 import { Draggable } from "react-beautiful-dnd";
+
 export default function Task({ task, index }) {
     return (
         &lt;Draggable draggableId={task.id} index={index}&gt;
@@ -611,33 +656,18 @@ export default function Task({ task, index }) {
             )}
         &lt;/Draggable&gt;
     )
+
 }</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">db.js</div>
+<div class="title">tasksDB.js</div>
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="javascript" class="language-javascript hljs">export const db = {
-    tasks: {
-        "task-1": { id: "task-1", vorname: "Hans", nachname: "Weber", image: "www.abc.musterhausen" },
-        "task-2": { id: "task-2", vorname: "Günther", nachname: "Schmidt", image: "www.abc.musterhausen" },
-        "task-3": { id: "task-3", vorname: "Eva", nachname: "Maier", image: "www.abc.musterhausen" },
-    },
-
-    columns: {
-        "column-1": {
-            id: "column-1",
-            title: "Mitarbeiter",
-            taskIds: ["task-1", "task-2", "task-3"]
-        },
-        "column-2": {
-            id: "column-2",
-            title: "Meine Auswahl",
-            taskIds: []
-        },
-    },
-    columnOrder: ["column-1", "column-2"],
-}</code></pre>
+<pre class="highlightjs highlight"><code data-lang="javascript" class="language-javascript hljs">export const tasks = [
+  { id: "task-1", vorname: "Hans", nachname: "Weber", image: "www.spd.de" },
+  { id: "task-2", vorname: "Günther", nachname: "Schmidt", image: "www.spd.de" },
+  { id: "task-3", vorname: "Eva", nachname: "Maier", image: "www.spd.de" },
+];</code></pre>
 </div>
 </div>
 </div>
