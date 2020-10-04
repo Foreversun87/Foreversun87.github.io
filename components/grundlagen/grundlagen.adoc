@@ -1,6 +1,10 @@
 // Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
 include::header.adoc[]
 
+== Links
+* https://riptutorial.com/javascript[Webseite]
+
+
 // Immer eine Zeile Abstand dazwischen, sonst Complilerfehler bzw. keine saubere Darstellung der einzelnen includes!!
 include::algorithmus/algorithmus.adoc[]
 

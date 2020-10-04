@@ -26,9 +26,9 @@ console.log(album);
 
 ==== bind
 [source,javascript]
-----
+--
 include::../../js/javascriptBuch/listening2_30.js[]
-----
+--
 
 ++++
 <iframe

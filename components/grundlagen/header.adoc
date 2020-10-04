@@ -6,7 +6,7 @@
 
 // :stylesheet: asciidoctor.css // Einbindung CSS
 // coderay ==> extra ruby // highlightjs // prettify // pygments ==> extra ruby // rouge
-:source-highlighter: coderay
+:source-highlighter: highlightjs
 :icons: font
 :stem: latexmath
 

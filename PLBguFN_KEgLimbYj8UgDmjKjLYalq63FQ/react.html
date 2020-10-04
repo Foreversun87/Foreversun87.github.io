@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Beautiful-DnD</title>
+<title>Drag and Drop</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -442,10 +442,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">React</div>
 <ul class="sectlevel1">
-<li><a href="#_beautiful_dnd">1. Beautiful-DnD</a>
+<li><a href="#_drag_and_drop">1. Drag and Drop</a>
 <ul class="sectlevel2">
-<li><a href="#_links">1.1. Links</a></li>
-<li><a href="#_sourcecode">1.2. Sourcecode</a></li>
+<li><a href="#_beautiful_dnd">1.1. Beautiful-DnD</a>
+<ul class="sectlevel3">
+<li><a href="#_links">1.1.1. Links</a></li>
+<li><a href="#_sourcecode">1.1.2. Sourcecode</a></li>
+</ul>
+</li>
+<li><a href="#_react_dnd">1.2. React DnD</a>
+<ul class="sectlevel3">
+<li><a href="#_links_2">1.2.1. Links</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_hooks">2. Hooks</a>
@@ -465,16 +474,43 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="content">
 <!-- toc disabled -->
 <div class="sect1">
-<h2 id="_beautiful_dnd">1. Beautiful-DnD</h2>
+<h2 id="_drag_and_drop">1. Drag and Drop</h2>
 <div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=Q1PYQPK9TaM">Youtube</a></p>
+</li>
+</ul>
+</div>
 <div class="sect2">
-<h3 id="_links">1.1. Links</h3>
-<div class="paragraph">
-<p><a href="https://www.youtube.com/watch?v=MYKwvGL1jU4&amp;list=PLBguFN_KEgLimbYj8UgDmjKjLYalq63FQ&amp;index=10">YOUTUBE</a></p>
+<h3 id="_beautiful_dnd">1.1. Beautiful-DnD</h3>
+<div class="sect3">
+<h4 id="_links">1.1.1. Links</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=MYKwvGL1jU4&amp;list=PLBguFN_KEgLimbYj8UgDmjKjLYalq63FQ&amp;index=10">Youtube</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=mJLQVTBoWxg">Youtube</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=Vqa9NMzF3wc">Youtube</a></p>
+</li>
+</ul>
+</div>
+<li style="margin-left: 24px; margin-bottom: 18px;"><a style="font-size: 1.0625rem;" ref="https://codesandbox.io/s/jovial-leakey-i0ex5?__cf_chl_jschl_tk__=972eb10fb3ad09853c82cb8ad3c19f445e764a7c-1601479490-0-ATy34oRS2fj6_RVjv6x58zyxfMm6bwWl9N8vlMgUyWFGIUfkwB5mWC9r4_Qf9ECtZ3fXjiKntEXI7VqPZjYXEaKCWyZlvJz1-W7QdFZMNCHlGjXaNHkUnq4DGpG1U8Oh2yqRZzwj7sAIR-z4camFnrOBiOaz1dVdn4as23v01ua6Zf1DBam_D2ki7d4G_2VIBWoE0ulN8RWimny5CwQw0-AIlapniWkS9I7in8nHf6ZlGErR1-nA2R3UR9N-aSixBbOiJtwm3WFEz0lipeYJP0EoJfRFaxWr6b_N0Jycs3ME&file=/src/App.js" target="_blank">Codebox - Basic</a></li>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://codesandbox.io/s/simple-virtual-list-board-vgvzt">Codebox - Erweiterte Funktionalität</a></p>
+</li>
+</ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_sourcecode">1.2. Sourcecode</h3>
+<div class="sect3">
+<h4 id="_sourcecode">1.1.2. Sourcecode</h4>
 <div class="listingblock">
 <div class="title">App.jsx</div>
 <div class="content">
@@ -606,6 +642,20 @@ export default function Task({ task, index }) {
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_react_dnd">1.2. React DnD</h3>
+<div class="sect3">
+<h4 id="_links_2">1.2.1. Links</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=aK2PD_REk7A">Youtube</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="sect1">
 <h2 id="_hooks">2. Hooks</h2>
@@ -718,8 +768,15 @@ export default App;</code></pre>
 </div>
 <div class="sect2">
 <h3 id="_use_vs_react_memo">2.5. use vs. react-memo</h3>
-<div class="paragraph">
-<p><a href="https://www.youtube.com/watch?v=uojLJFt9SzY">YOUTUBE</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=3cYtqrNUiVw">Youtube</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=uojLJFt9SzY">Youtube</a></p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
